@@ -17,6 +17,7 @@
     --youtube: #ff0000;
     --twitch: #9146ff;
     --instagram: #e1306c;
+    --x: #ffffff;
     --glass-blur: 20px;
 }
 
@@ -164,6 +165,10 @@ body::before {
     animation-delay: 0.4s;
 }
 
+.link-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
 @keyframes slideInUp {
     from {
         opacity: 0;
@@ -231,6 +236,19 @@ body::before {
     backdrop-filter: blur(25px);
 }
 
+.link-card.x {
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.link-card.x:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 48px rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(25px);
+}
+
 .icon-wrapper {
     width: 50px;
     height: 50px;
@@ -258,6 +276,11 @@ body::before {
 .link-card.instagram .icon-wrapper {
     background: rgba(225, 48, 108, 0.12);
     color: var(--instagram);
+}
+
+.link-card.x .icon-wrapper {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--x);
 }
 
 .link-card:hover .icon-wrapper {
